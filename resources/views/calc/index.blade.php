@@ -6,7 +6,7 @@
     <div class="container">
         <h1 class="display-3">Calculadora</h1>
         <p>Calculadora de expresiones matemáticas</p>
-        <p></p>
+        <p>Para hacer pruebas usar este URL: {{route('calc')}}</p>
     </div>
 </div>
 
@@ -36,7 +36,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group {{ $errors->has('expression') ? 'has-error' : '' }}">
-                            <button type="button" id='btnSend' class="btn btn-primary">Enviar</button>
+                            <button type="button" id='btnSend' class="btn btn-primary">Calcular</button>
                         </div>
                     </div>
                 </div><!--/.row-->
