@@ -7,7 +7,7 @@
         <meta name="author" content="WilzonMB.com">
         <title>Demo</title>
         <link href="/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/css/style.css" rel="stylesheet">
+        <link href="/css/style.css{{CID}}" rel="stylesheet">
     </head>
     <body>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -62,6 +62,6 @@
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="/js/jquery-3.2.1.min.js"></script>
         <script src="/js/bootstrap.min.js"></script>
-        <script src="/js/script.js"></script>
+        <script src="/js/script.js{{CID}}"></script>
     </body>
 </html>

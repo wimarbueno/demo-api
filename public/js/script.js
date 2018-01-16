@@ -7,7 +7,7 @@ jQuery(document).ready(function () {
                 'x-csrf-token': document.querySelectorAll('input[name=_token]')[0].value
             }
         });
-        
+
         var $form = $('#formCalc');
         var params = $form.serialize();
         var url = $form.attr('action');
@@ -32,4 +32,13 @@ jQuery(document).ready(function () {
             }
         }); // End ajax
     };
+
+    $('#btnSend').on('click', function () {
+        var value = $('#expression').val();
+        if (value) {
+            calculadora();
+        } else {
+            $('#message').html('<div class="alert alert-danger" role="alert">Ingrese valor por favor</div>');
+        }
+    });
 });
