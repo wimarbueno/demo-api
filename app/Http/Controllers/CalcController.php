@@ -70,7 +70,21 @@ class CalcController extends Controller {
         $array = [
             'result' => $result
         ];
-        return response()->json([$array], 200);
+        return response()->json($array, 200);
+    }
+
+    public function index(Request $request) {
+        $result = 0;
+        $expression = 0;
+        if ($request->isMethod('post')) {
+            $expression = $request->input('expression');
+            $result = $this->calculate($expression);
+        }
+
+        return view('calc.index', [
+            'result' => $result,
+            'expression' => $expression,
+        ]);
     }
 
 }

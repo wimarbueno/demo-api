@@ -1,0 +1,29 @@
+body {
+    padding-top: 3.5rem;
+}
+
+.required,
+.red{color:red}
+
+
+/*
+* Tool
+*/
+/*<div class="wmb-loading-wrapper">
+    <div class="loading-bg"></div>
+    <div class="loading-content">
+        <div class="loading"></div>
+        <div class="text">Loading...</div>
+    </div>
+</div>*/
+.wmb-loading-wrapper,
+.wmb-loading-wrapper .loading-bg{display: block;width: 100%;height: 100%;left: 0;top: 0;}
+.wmb-loading-wrapper{display: none;position: fixed;z-index: 11001;}
+.wmb-loading-wrapper .loading-bg{background: #000;opacity: 0.5;}
+.wmb-loading-wrapper .loading-content{display: block;width: 150px;height: 150px;padding: 10px;position: fixed;left: 50%;top: 50%;margin-left: -75px;margin-top: -75px;text-align: center;overflow: hidden;border-radius: 100%;/*background: #fff;box-shadow: 0 0 18px #c9c9c9;*/}
+.wmb-loading-wrapper .loading{background: url("../img/loading.gif") no-repeat scroll 0 0 transparent;display: block;width: 42px;height: 42px;margin: 22px auto 0;text-align: left;text-indent: -99999em;overflow: hidden;}
+.wmb-loading-wrapper .text{padding-top: 10px;float: left}
+
+.wmb-loading-wrapper.individual{display: none;position: absolute;}
+.wmb-loading-wrapper.individual .loading-content{position: absolute;}
+/* /Loading wrapper*/

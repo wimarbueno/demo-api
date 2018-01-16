@@ -10,6 +10,7 @@
   | contains the "web" middleware group. Now create something great!
   |
  */
+define('BASE_URL', app()->environment());
 
 Route::get('/', function () {
     return view('welcome');
