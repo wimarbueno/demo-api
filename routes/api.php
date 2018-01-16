@@ -21,7 +21,8 @@ Route::get('/test', function (Request $request) {
 
 /**
  * http://dominio.com/api/calc
- * ejemplo de uso: {"expression": "-1 * (2 * 6 / 3)"}
+ * Ejemplo de como pasar los valores con json: {"expression": "-1 * (2 * 6 / 3)"}
+ *
+ * @return type Json {"result": "-4"}
  */
-//Route::match(['get', 'post'], '/calc', 'CalcController@calc')->name('calc');
 Route::match(['get', 'post'], '/calc', 'CalcController@calc')->name('calc');
