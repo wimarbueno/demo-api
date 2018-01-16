@@ -7,6 +7,11 @@
         <h1 class="display-3">Calculadora</h1>
         <p>Calculadora de expresiones matemáticas</p>
         <p>Para hacer pruebas usar este URL: {{route('calc')}}</p>
+        <p>Ejemplo:
+            <code>
+                {"expression": "-1 * (2 * 6 / 3)"}
+            </code>
+        </p>
     </div>
 </div>
 
