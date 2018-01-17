@@ -1,5 +1,7 @@
 @extends('layout')
 
+@section('title')Calculadora de expresiones matemáticas @endsection
+
 @section('content')
 <div class="jumbotron">
     <div class="container">

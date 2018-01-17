@@ -1,9 +1,11 @@
 @extends('layout')
 
+@section('title') Twitter API @endsection
+
 @section('content')
 <div class="jumbotron">
     <div class="container">
-        <h1 class="display-3">Social API</h1>
+        <h1 class="display-3">Twitter API</h1>
     </div>
 </div>
 

@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="WilzonMB.com">
-        <title>Demo</title>
+        <title>@section('title')Demo API @show</title>
         <link href="/css/bootstrap.min.css" rel="stylesheet">
         <link href="/css/style.css{{CID}}" rel="stylesheet">
     </head>
@@ -39,7 +39,7 @@
                 <div class="loading"></div>
             </div>
         </div>
-      
+
         <script src="/js/jquery-3.2.1.min.js"></script>
         <script src="/js/bootstrap.min.js"></script>
         <script src="/js/script.js{{CID}}"></script>
