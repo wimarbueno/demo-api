@@ -1,7 +1,6 @@
 @extends('layout')
 
 @section('content')
-<!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
     <div class="container">
         <h1 class="display-3">Calculadora</h1>
@@ -19,7 +18,10 @@
     <!-- Example row of columns -->
     <div class="row">
         <div class="col-md-4">
+            <h4>Historial</h4>
+            <ul class="list-group" id="historial-list" style="max-height: 400px;overflow: auto;">
 
+            </ul>
         </div>
         <div class="col-md-4">
             <div class="row">
@@ -32,9 +34,9 @@
                     <div class="col-md-12">
                         <div class="form-group {{ $errors->has('expression') ? 'has-error' : '' }}">
                             <label for="expression">Expresión <span class="required">*</span></label>
-                            <input type="text" id="expression" name="expression" id="expression" class="form-control" placeholder="-1 * (2 * 6 / 3)" value="" required="">
+                            <input type="text" id="expression" name="expression" class="form-control" placeholder="-1 * (2 * 6 / 3)" value="" required="">
                             <div class="error">{{$errors->first('expression')}}</div>
-                            <div>Resultado: <span id="resultado"</span></div>
+                            <div>Resultado: <span id="resultado"></span></div>
                         </div>
                     </div>
                 </div><!--/.row-->

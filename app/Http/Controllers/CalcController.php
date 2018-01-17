@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\CalcHistory;
+use Illuminate\Support\Facades\Cookie;
 
 class CalcController extends Controller {
 
@@ -67,8 +69,21 @@ class CalcController extends Controller {
         //$result = $this->calculate('-1 * (2 * 6 / 3)');
         $result = $this->calculate($expression);
 
+        /*
+         * Historial
+         */
+        $token = Cookie::get('XSRF-TOKEN');
+        $historial = new CalcHistory();
+        $historial->expression = $expression;
+        $historial->result = $result;
+        $historial->token = $token;
+        $historial->save();
+
+        $historial_list = CalcHistory::select('expression', 'result')->where('token', '=', $token)->paginate(30);
+
         $array = [
-            'result' => $result
+            'result' => $result,
+            'historial' => $historial_list,
         ];
         return response()->json($array, 200);
     }
