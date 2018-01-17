@@ -73,18 +73,26 @@ class CalcController extends Controller {
          * Historial
          */
         $token = Cookie::get('XSRF-TOKEN');
-        $historial = new CalcHistory();
-        $historial->expression = $expression;
-        $historial->result = $result;
-        $historial->token = $token;
-        $historial->save();
+        if (is_numeric($result)) {
+            $historial = new CalcHistory();
+            $historial->expression = $expression;
+            $historial->result = $result;
+            $historial->token = $token;
+            $historial->save();
 
-        $historial_list = CalcHistory::select('expression', 'result')->where('token', '=', $token)->paginate(30);
+            $historial_list = CalcHistory::select('expression', 'result')->where('token', '=', $token)->paginate(30);
 
-        $array = [
-            'result' => $result,
-            'historial' => $historial_list,
-        ];
+            $array = [
+                'result' => $result,
+                'historial' => $historial_list,
+            ];
+        } else {
+            $historial_list = CalcHistory::select('expression', 'result')->where('token', '=', $token)->paginate(30);
+            $array = [
+                'result' => '',
+                'historial' => $historial_list,
+            ];
+        }
         return response()->json($array, 200);
     }
 

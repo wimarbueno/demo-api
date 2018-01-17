@@ -17,3 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::match(['get', 'post'], '/calc/index', 'CalcController@index')->name('calc:index');
+
+Route::match(['get', 'post'], '/social/index', 'SocialController@index')->name('social:index');
