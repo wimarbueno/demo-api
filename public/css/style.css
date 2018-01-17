@@ -3,10 +3,11 @@ body {
 }
 .list-group.list-group{}
 .list-group.list-group li{}
-
+.border{border: 1px solid #ccc;padding: 10px;}
 .required,
 .red{color:red}
 
+.mb-10{margin-bottom: 10px;}
 
 /*
 * Tool

@@ -11,10 +11,16 @@ class SocialController extends Controller {
         return view('social.index');
     }
 
-    public function filter() {
-        $twits = Twitter::getUserTimeline(['screen_name' => 'wimarbueno', 'count' => 20, 'format' => 'json']);
+    public function filterByUser(Request $request) {
+        $screen_name = ($request->input('screen_name')) ? $request->input('screen_name') : 'bbva';
+        $tweets = Twitter::getUserTimeline(['screen_name' => $screen_name, 'count' => 30, 'format' => 'json']);
+        return $tweets;
+    }
 
-        return $twits;
+    public function search(Request $request) {
+        $search_tweets = $request->input('search_tweets');
+        $tweets = Twitter::getSearch(['count' => 4, 'format' => 'json', "q" => $search_tweets]);
+        return $tweets;
     }
 
 }

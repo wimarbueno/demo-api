@@ -11,7 +11,7 @@
   |
  */
 define('BASE_URL', app()->environment());
-define('CID', '?cid=08');
+define('CID', '?cid=17');
 
 Route::get('/', function () {
     return view('welcome');
@@ -19,4 +19,5 @@ Route::get('/', function () {
 Route::match(['get', 'post'], '/calc/index', 'CalcController@index')->name('calc:index');
 
 Route::match(['get', 'post'], '/social/index', 'SocialController@index')->name('social:index');
-Route::match(['get', 'post'], '/social/filter', 'SocialController@filter')->name('social:filter');
+Route::match(['get', 'post'], '/social/filterbyuser', 'SocialController@filterByUser')->name('social:filterbyuser');
+Route::match(['get', 'post'], '/social/search', 'SocialController@search')->name('social:search');
