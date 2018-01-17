@@ -3,13 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Thujohn\Twitter\Facades\Twitter;
 
 class SocialController extends Controller {
 
     public function index() {
-//        $twits = Twitter::getUserTimeline(['screen_name' => 'thujohn', 'count' => 20, 'format' => 'json']);
-//        dd($twits);
         return view('social.index');
+    }
+
+    public function filter() {
+        $twits = Twitter::getUserTimeline(['screen_name' => 'wimarbueno', 'count' => 20, 'format' => 'json']);
+
+        return $twits;
     }
 
 }

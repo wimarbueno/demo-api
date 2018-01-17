@@ -20,12 +20,6 @@
     <!-- Example row of columns -->
     <div class="row">
         <div class="col-md-4">
-            <h4>Historial</h4>
-            <ul class="list-group" id="historial-list" style="max-height: 400px;overflow: auto;">
-
-            </ul>
-        </div>
-        <div class="col-md-4">
             <div class="row">
                 <div class="col-md-12" id="message"></div>
             </div>
@@ -34,22 +28,28 @@
                 {!! csrf_field() !!}
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="form-group {{ $errors->has('expression') ? 'has-error' : '' }}">
+                        <div class="form-group">
                             <label for="expression">Expresión <span class="required">*</span></label>
                             <input type="text" id="expression" name="expression" class="form-control" placeholder="-1 * (2 * 6 / 3)" value="" required="">
-                            <div class="error">{{$errors->first('expression')}}</div>
+                            <div class="error"></div>
                             <div>Resultado: <span id="resultado"></span></div>
                         </div>
                     </div>
                 </div><!--/.row-->
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="form-group {{ $errors->has('expression') ? 'has-error' : '' }}">
+                        <div class="form-group">
                             <button type="button" id='btnSend' class="btn btn-primary">Calcular</button>
                         </div>
                     </div>
                 </div><!--/.row-->
             </form>
+        </div>
+        <div class="col-md-4">
+            <h4>Historial</h4>
+            <ul class="list-group" id="historial-list" style="max-height: 400px;overflow: auto;">
+
+            </ul>
         </div>
     </div>
     <hr>
