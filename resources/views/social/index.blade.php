@@ -65,3 +65,9 @@
     <hr>
 </div> <!-- /container -->
 @endsection
+
+@section('script')
+<script type="text/javascript">
+    twitterByUser();
+</script>
+@endsection

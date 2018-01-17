@@ -188,6 +188,5 @@ jQuery(document).ready(function () {
         } else {
             $('#message').html('<div class="alert alert-danger" role="alert">Ingrese una palabra de búsqueda por favor</div>');
         }
-    });
-    twitterByUser();
+    });    
 });
