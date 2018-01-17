@@ -68,6 +68,8 @@
 
 @section('script')
 <script type="text/javascript">
-    twitterByUser();
+    jQuery(document).ready(function () {
+        twitterByUser();
+    });
 </script>
 @endsection
