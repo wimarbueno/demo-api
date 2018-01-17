@@ -22,10 +22,10 @@ jQuery(document).ready(function () {
             },
             success: function (response) {
                 $loadingWrapper.hide();
-                $('#resultado').html(response.result).fadeOut().fadeIn();
+                $('#resultado').html(response.result).hide().fadeIn();
 
                 var $historial = $('#historial-list');
-                $historial.html('').fadeOut().fadeIn();
+                $historial.html('').hide().fadeIn();
                 $.each(response.historial.data, function (index, value) {
                     $historial.append('<li class="list-group-item d-flex justify-content-between align-items-center">' + value.expression + '  <span class="badge badge-primary badge-pill">' + value.result + '</span>' + '</li>');
                 });
