@@ -19,7 +19,7 @@ class SocialController extends Controller {
 
     public function search(Request $request) {
         $search_tweets = $request->input('search_tweets');
-        $tweets = Twitter::getSearch(['count' => 4, 'format' => 'json', "q" => $search_tweets]);
+        $tweets = Twitter::getSearch(['count' => 30, 'format' => 'json', "q" => $search_tweets]);
         return $tweets;
     }
 

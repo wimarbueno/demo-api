@@ -11,7 +11,7 @@
   |
  */
 define('BASE_URL', app()->environment());
-define('CID', '?cid=17');
+define('CID', '?cid=18');
 
 Route::get('/', function () {
     return view('welcome');

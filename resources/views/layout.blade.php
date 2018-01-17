@@ -30,7 +30,7 @@
         </main>
 
         <footer class="container">
-            <p>&copy; 2017</p>
+            <p>&copy; <a href="http://wilzonmb.com" target="_blank">WilzonMB.com</a> 2017</p>
         </footer>
 
         <div class="wmb-loading-wrapper">
